@@ -1,5 +1,6 @@
 package lk.ijse.config;
 
+import lk.ijse.entity.*;
 import lk.ijse.util.PropertyInjector;
 import org.hibernate.Session;
 import org.hibernate.SessionFactory;
@@ -10,11 +11,12 @@ public class FactoryConfiguration {
     private static SessionFactory sessionFactory;
 
     private FactoryConfiguration() {
-        Configuration configuration = new Configuration().addProperties(PropertyInjector.injectProperties());
-                /*.addAnnotatedClass(LoginDetails.class)
-                .addAnnotatedClass(Room.class)
-                .addAnnotatedClass(Reservation.class)
-                .addAnnotatedClass(Student.class);*/
+        Configuration configuration = new Configuration().addProperties(PropertyInjector.injectProperties())
+                .addAnnotatedClass(Admin.class)
+                .addAnnotatedClass(Branch.class)
+                .addAnnotatedClass(Book.class)
+                .addAnnotatedClass(User.class)
+                .addAnnotatedClass(Transaction.class);
         sessionFactory = configuration.buildSessionFactory();
     }
 
