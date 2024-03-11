@@ -6,6 +6,7 @@ import javafx.scene.Parent;
 import javafx.scene.Scene;
 import javafx.scene.control.Button;
 import javafx.scene.control.TextField;
+import javafx.scene.input.KeyEvent;
 import javafx.scene.layout.AnchorPane;
 import javafx.stage.Stage;
 
@@ -43,5 +44,17 @@ public class AdminSignInFormController {
 
     public void btnAdminCrtAccOnAction(ActionEvent actionEvent) {
 
+    }
+
+    public void txtAdminFNameOnKeyReleased(KeyEvent keyEvent) {
+    }
+
+    public void txtAdminPWOnKeyReleased(KeyEvent keyEvent) {
+    }
+
+    public void txtAdminLNameOnKeyReleased(KeyEvent keyEvent) {
+    }
+
+    public void txtAdminEmailOnKeyReleased(KeyEvent keyEvent) {
     }
 }

@@ -36,10 +36,10 @@
             <Font name="Arial Bold" size="14.0" />
          </font>
       </Label>
-      <TextField fx:id="txtUserFName" layoutX="113.0" layoutY="147.0" prefHeight="35.0" prefWidth="267.0" style="-fx-background-radius: 8; -fx-background-color: D0D0D0;" />
-      <TextField fx:id="txtuserLName" layoutX="422.0" layoutY="148.0" prefHeight="35.0" prefWidth="267.0" style="-fx-background-radius: 8; -fx-background-color: D0D0D0;" />
-      <TextField fx:id="txtUserEmail" layoutX="113.0" layoutY="236.0" prefHeight="35.0" prefWidth="267.0" style="-fx-background-radius: 8; -fx-background-color: D0D0D0;" />
-      <TextField fx:id="txtUserPW" layoutX="113.0" layoutY="336.0" prefHeight="35.0" prefWidth="267.0" style="-fx-background-radius: 8; -fx-background-color: D0D0D0;" />
+      <TextField fx:id="txtUserFName" layoutX="113.0" layoutY="147.0" onKeyReleased="#txtUserFNameOnKeyReleased" prefHeight="35.0" prefWidth="267.0" style="-fx-background-radius: 8; -fx-background-color: D0D0D0;" />
+      <TextField fx:id="txtuserLName" layoutX="422.0" layoutY="148.0" onKeyReleased="#txtUserLNameOnKeyReleased" prefHeight="35.0" prefWidth="267.0" style="-fx-background-radius: 8; -fx-background-color: D0D0D0;" />
+      <TextField fx:id="txtUserEmail" layoutX="113.0" layoutY="236.0" onKeyReleased="#txtUserEmailOnKeyReleased" prefHeight="35.0" prefWidth="267.0" style="-fx-background-radius: 8; -fx-background-color: D0D0D0;" />
+      <TextField fx:id="txtUserPW" layoutX="113.0" layoutY="336.0" onKeyReleased="#txtUserPWOnKeyReleased" prefHeight="35.0" prefWidth="267.0" style="-fx-background-radius: 8; -fx-background-color: D0D0D0;" />
       <Button fx:id="btnUSignIn" layoutX="422.0" layoutY="399.0" mnemonicParsing="false" onAction="#btnUSignInOnAction" prefHeight="35.0" prefWidth="156.0" style="-fx-background-color: white; -fx-border-color: blue; -fx-border-radius: 8;" text="Sign In" textFill="#181c90">
          <cursor>
             <Cursor fx:constant="HAND" />

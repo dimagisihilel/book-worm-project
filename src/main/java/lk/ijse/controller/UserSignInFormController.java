@@ -6,6 +6,7 @@ import javafx.scene.Parent;
 import javafx.scene.Scene;
 import javafx.scene.control.Button;
 import javafx.scene.control.TextField;
+import javafx.scene.input.KeyEvent;
 import javafx.scene.layout.AnchorPane;
 import javafx.stage.Stage;
 
@@ -14,11 +15,11 @@ import java.io.IOException;
 public class UserSignInFormController {
 
     public Button btnUSignIn;
-    public TextField txtUserConPW;
     public TextField txtUserEmail;
     public TextField txtuserLName;
     public TextField txtUserFName;
     public AnchorPane subroot;
+    public TextField txtUserPW;
 
     public void btnUSignInOnAction(ActionEvent actionEvent) throws IOException {
         navigateToMainWindow();
@@ -38,5 +39,17 @@ public class UserSignInFormController {
     }
     public void btnUserCrteAccOnAction(ActionEvent actionEvent) {
 
+    }
+
+    public void txtUserFNameOnKeyReleased(KeyEvent keyEvent) {
+    }
+
+    public void txtUserLNameOnKeyReleased(KeyEvent keyEvent) {
+    }
+
+    public void txtUserEmailOnKeyReleased(KeyEvent keyEvent) {
+    }
+
+    public void txtUserPWOnKeyReleased(KeyEvent keyEvent) {
     }
 }

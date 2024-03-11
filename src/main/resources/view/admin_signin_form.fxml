@@ -33,10 +33,10 @@
             <Font name="System Bold" size="16.0" />
          </font>
       </Label>
-      <TextField fx:id="txtAdminFName" layoutX="185.0" layoutY="124.0" prefHeight="35.0" prefWidth="270.0" style="-fx-background-color: D0D0D0; -fx-background-radius: 8;" />
-      <TextField fx:id="txtAdminPW" layoutX="178.0" layoutY="295.0" prefHeight="35.0" prefWidth="270.0" style="-fx-background-color: D0D0D0; -fx-background-radius: 8;" />
-      <TextField fx:id="txtAdminLName" layoutX="572.0" layoutY="119.0" prefHeight="35.0" prefWidth="270.0" style="-fx-background-color: D0D0D0; -fx-background-radius: 8;" />
-      <TextField fx:id="txtAdminEmail" layoutX="147.0" layoutY="214.0" prefHeight="35.0" prefWidth="270.0" style="-fx-background-color: D0D0D0; -fx-background-radius: 8;" />
+      <TextField fx:id="txtAdminFName" layoutX="185.0" layoutY="124.0" onKeyReleased="#txtAdminFNameOnKeyReleased" prefHeight="35.0" prefWidth="270.0" style="-fx-background-color: D0D0D0; -fx-background-radius: 8;" />
+      <TextField fx:id="txtAdminPW" layoutX="178.0" layoutY="295.0" onKeyReleased="#txtAdminPWOnKeyReleased" prefHeight="35.0" prefWidth="270.0" style="-fx-background-color: D0D0D0; -fx-background-radius: 8;" />
+      <TextField fx:id="txtAdminLName" layoutX="572.0" layoutY="119.0" onKeyReleased="#txtAdminLNameOnKeyReleased" prefHeight="35.0" prefWidth="270.0" style="-fx-background-color: D0D0D0; -fx-background-radius: 8;" />
+      <TextField fx:id="txtAdminEmail" layoutX="147.0" layoutY="214.0" onKeyReleased="#txtAdminEmailOnKeyReleased" prefHeight="35.0" prefWidth="270.0" style="-fx-background-color: D0D0D0; -fx-background-radius: 8;" />
       <Button fx:id="btnAdminSignin" layoutX="362.0" layoutY="389.0" mnemonicParsing="false" onAction="#btnAdminSigninOnAction" prefHeight="42.0" prefWidth="150.0" style="-fx-background-color: white; -fx-border-color: blue; -fx-border-radius: 8;" text="Sign In" textFill="#264697">
          <font>
             <Font size="14.0" />
