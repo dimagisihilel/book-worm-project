@@ -1,0 +1,58 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<?import javafx.scene.Cursor?>
+<?import javafx.scene.control.Button?>
+<?import javafx.scene.control.Label?>
+<?import javafx.scene.control.TextField?>
+<?import javafx.scene.image.Image?>
+<?import javafx.scene.image.ImageView?>
+<?import javafx.scene.layout.AnchorPane?>
+<?import javafx.scene.text.Font?>
+
+<AnchorPane fx:id="subroot" prefHeight="499.0" prefWidth="874.0" xmlns="http://javafx.com/javafx/20.0.1" xmlns:fx="http://javafx.com/fxml/1" fx:controller="lk.ijse.controller.UserSignInFormController">
+   <children>
+      <Label layoutX="89.0" layoutY="45.0" text="User Sign In" textFill="#171983">
+         <font>
+            <Font name="Arial" size="27.0" />
+         </font>
+      </Label>
+      <Label layoutX="113.0" layoutY="129.0" text="First Name" textFill="#141e8d">
+         <font>
+            <Font name="Arial Bold" size="14.0" />
+         </font>
+      </Label>
+      <Label layoutX="437.0" layoutY="129.0" text="Last Name" textFill="#141e8d">
+         <font>
+            <Font name="Arial Bold" size="14.0" />
+         </font>
+      </Label>
+      <Label layoutX="113.0" layoutY="219.0" text="Email" textFill="#141e8d">
+         <font>
+            <Font name="Arial Bold" size="14.0" />
+         </font>
+      </Label>
+      <Label layoutX="113.0" layoutY="311.0" text="Password" textFill="#141e8d">
+         <font>
+            <Font name="Arial Bold" size="14.0" />
+         </font>
+      </Label>
+      <TextField fx:id="txtUserFName" layoutX="113.0" layoutY="147.0" prefHeight="35.0" prefWidth="267.0" style="-fx-background-radius: 8; -fx-background-color: D0D0D0;" />
+      <TextField fx:id="txtuserLName" layoutX="422.0" layoutY="148.0" prefHeight="35.0" prefWidth="267.0" style="-fx-background-radius: 8; -fx-background-color: D0D0D0;" />
+      <TextField fx:id="txtUserEmail" layoutX="113.0" layoutY="236.0" prefHeight="35.0" prefWidth="267.0" style="-fx-background-radius: 8; -fx-background-color: D0D0D0;" />
+      <TextField fx:id="txtUserPW" layoutX="113.0" layoutY="336.0" prefHeight="35.0" prefWidth="267.0" style="-fx-background-radius: 8; -fx-background-color: D0D0D0;" />
+      <Button fx:id="btnUSignIn" layoutX="422.0" layoutY="399.0" mnemonicParsing="false" onAction="#btnUSignInOnAction" prefHeight="35.0" prefWidth="156.0" style="-fx-background-color: white; -fx-border-color: blue; -fx-border-radius: 8;" text="Sign In" textFill="#181c90">
+         <cursor>
+            <Cursor fx:constant="HAND" />
+         </cursor></Button>
+      <ImageView fitHeight="263.0" fitWidth="257.0" layoutX="586.0" layoutY="204.0">
+         <image>
+            <Image url="@../assets/girluser.png" />
+         </image>
+      </ImageView>
+      <Button fx:id="btnUserCrteAcc" layoutX="186.0" layoutY="399.0" mnemonicParsing="false" onAction="#btnUserCrteAccOnAction" prefHeight="35.0" prefWidth="156.0" style="-fx-background-color: white; -fx-border-color: blue; -fx-border-radius: 8;" text="Create Account" textFill="#181c90">
+         <cursor>
+            <Cursor fx:constant="HAND" />
+         </cursor>
+      </Button>
+   </children>
+</AnchorPane>

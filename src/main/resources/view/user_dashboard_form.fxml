@@ -1,0 +1,111 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<?import javafx.scene.Cursor?>
+<?import javafx.scene.control.Button?>
+<?import javafx.scene.control.Label?>
+<?import javafx.scene.image.Image?>
+<?import javafx.scene.image.ImageView?>
+<?import javafx.scene.layout.AnchorPane?>
+<?import javafx.scene.layout.Pane?>
+<?import javafx.scene.shape.Circle?>
+<?import javafx.scene.shape.Line?>
+<?import javafx.scene.shape.Rectangle?>
+<?import javafx.scene.text.Font?>
+
+<AnchorPane prefHeight="673.0" prefWidth="1184.0" style="-fx-background-color: white;" xmlns="http://javafx.com/javafx/20.0.1" xmlns:fx="http://javafx.com/fxml/1" fx:controller="lk.ijse.controller.UserDashboardFormController">
+   <children>
+      <Rectangle arcHeight="40.0" arcWidth="40.0" fill="WHITE" height="36.0" layoutX="890.0" layoutY="8.0" stroke="#a8a2a2" strokeType="INSIDE" width="215.0" />
+      <Circle fill="#c8cacd" layoutX="915.0" layoutY="26.0" radius="12.0" stroke="#949090" strokeType="INSIDE" />
+      <Label layoutX="45.0" layoutY="63.0" text="Recommended" />
+      <Label layoutX="157.0" layoutY="64.0" text="Recently Read" />
+      <Line endX="128.0" layoutX="141.0" layoutY="90.0" startX="-100.0" />
+      <Label layoutX="934.0" layoutY="16.0" prefHeight="21.0" prefWidth="136.0" text="Dimagi Sihilel" textFill="#0e0c6d">
+         <font>
+            <Font name="Arial" size="15.0" />
+         </font>
+      </Label>
+      <ImageView fitHeight="16.0" fitWidth="14.0" layoutX="1073.0" layoutY="17.0">
+         <image>
+            <Image url="@../assets/downsymbol.png" />
+         </image>
+      </ImageView>
+      <AnchorPane fx:id="root" layoutX="6.0" layoutY="127.0" prefHeight="542.0" prefWidth="1173.0" style="-fx-background-color: gray;" />
+      <ImageView fitHeight="24.0" fitWidth="152.0" layoutX="31.0" layoutY="9.0">
+         <image>
+            <Image url="@../assets/BookWorm.png" />
+         </image>
+      </ImageView>
+      <Pane fx:id="paneAccSetting" layoutX="897.0" layoutY="45.0" prefHeight="167.0" prefWidth="200.0" style="-fx-background-color: D9D9D9;">
+         <children>
+            <Rectangle arcHeight="40.0" arcWidth="40.0" fill="WHITE" height="36.0" layoutY="130.0" stroke="#a8a2a2" strokeType="INSIDE" width="200.0" />
+            <Rectangle arcHeight="40.0" arcWidth="40.0" fill="WHITE" height="36.0" layoutY="1.0" stroke="#a8a2a2" strokeType="INSIDE" width="200.0" />
+            <Label layoutX="26.0" layoutY="93.0" text="Delete User Account">
+               <font>
+                  <Font name="Arial" size="15.0" />
+               </font>
+            </Label>
+            <Label layoutX="42.0" layoutY="49.0" text="Edit Profile">
+               <font>
+                  <Font name="Arial" size="17.0" />
+               </font>
+            </Label>
+            <Label layoutX="72.0" layoutY="138.0" text="Log Out">
+               <font>
+                  <Font name="Arial" size="17.0" />
+               </font>
+            </Label>
+            <Label layoutX="57.0" layoutY="9.0" text="Privacy Setting">
+               <font>
+                  <Font name="Arial" size="17.0" />
+               </font>
+            </Label>
+            <ImageView fitHeight="16.0" fitWidth="24.0" layoutX="165.0" layoutY="53.0">
+               <image>
+                  <Image url="@../assets/Edit.png" />
+               </image>
+            </ImageView>
+            <ImageView fitHeight="24.0" fitWidth="24.0" layoutX="24.0" layoutY="136.0">
+               <image>
+                  <Image url="@../assets/OpenPane.png" />
+               </image>
+            </ImageView>
+            <ImageView fitHeight="20.0" fitWidth="24.0" layoutX="165.0" layoutY="91.0">
+               <image>
+                  <Image url="@../assets/Lock.png" />
+               </image>
+            </ImageView>
+            <ImageView fitHeight="21.0" fitWidth="24.0" layoutX="25.0" layoutY="9.0">
+               <image>
+                  <Image url="@../assets/SecurityConfiguration.png" />
+               </image>
+            </ImageView>
+            <Button fx:id="btnEditpro" layoutX="3.0" layoutY="38.0" mnemonicParsing="false" onAction="#btnEditproOnAction" opacity="0.0" prefHeight="45.0" prefWidth="193.0" text="Editpro">
+               <cursor>
+                  <Cursor fx:constant="HAND" />
+               </cursor>
+            </Button>
+            <Button fx:id="btnLogout" layoutX="5.0" layoutY="131.0" mnemonicParsing="false" onAction="#btnLogoutOnAction" opacity="0.0" prefHeight="36.0" prefWidth="187.0" text="Button" />
+            <Button fx:id="btnDltAcc" layoutX="6.0" layoutY="84.0" mnemonicParsing="false" onAction="#btnDltAccOnAction" opacity="0.0" prefHeight="36.0" prefWidth="193.0" text="chngPW">
+               <cursor>
+                  <Cursor fx:constant="HAND" />
+               </cursor>
+            </Button>
+         </children>
+      </Pane>
+      <Button fx:id="btnRecommend" layoutX="41.0" layoutY="47.0" mnemonicParsing="false" onAction="#btnRecommendOnAction" opacity="0.0" prefHeight="60.0" prefWidth="106.0" text="Button">
+         <cursor>
+            <Cursor fx:constant="HAND" />
+         </cursor>
+      </Button>
+      <Button fx:id="btnRead" layoutX="157.0" layoutY="52.0" mnemonicParsing="false" onAction="#btnReadOnAction" opacity="0.0" prefHeight="52.0" prefWidth="113.0" text="Button">
+         <cursor>
+            <Cursor fx:constant="HAND" />
+         </cursor>
+      </Button>
+      <Button fx:id="btnAccount" layoutX="891.0" layoutY="8.0" mnemonicParsing="false" onAction="#btnAccountOnAction" opacity="0.0" prefHeight="36.0" prefWidth="215.0" text="Button">
+         <cursor>
+            <Cursor fx:constant="HAND" />
+         </cursor>
+      </Button>
+   </children>
+</AnchorPane>
