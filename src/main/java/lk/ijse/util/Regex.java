@@ -42,6 +42,9 @@ public class Regex {
             case TEXT_SPACE_NUMBER:
                 field="^[a-z A-Z\\d]{1,}$";
                 break;
+            case PASSWORD:
+                field="^(?=.*[A-Za-z])(?=.*\\d)[A-Za-z\\d]{8,}$";
+                break;
         }
 
         Pattern pattern=Pattern.compile(field);
