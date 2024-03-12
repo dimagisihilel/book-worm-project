@@ -20,7 +20,7 @@
          </image>
       </ImageView>
       <Circle fill="#b2b2b2" layoutX="947.0" layoutY="41.0" radius="14.0" stroke="BLACK" strokeType="INSIDE" />
-      <Label layoutX="970.0" layoutY="26.0" prefHeight="28.0" prefWidth="111.0" text="D. Gunarathne" textFill="#191a68">
+      <Label fx:id="lblAdminName" layoutX="970.0" layoutY="26.0" prefHeight="28.0" prefWidth="111.0" text="D. Gunarathne" textFill="#191a68">
          <font>
             <Font size="15.0" />
          </font>

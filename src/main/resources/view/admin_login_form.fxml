@@ -42,8 +42,8 @@
             <Font name="Arial Bold" size="15.0" />
          </font>
       </Label>
-      <TextField fx:id="txtALoginEmail" layoutX="55.0" layoutY="239.0" prefHeight="36.0" prefWidth="357.0" style="-fx-background-color: D0D0D0; -fx-background-radius: 7;" />
-      <TextField fx:id="txtALoginPW" layoutX="54.0" layoutY="319.0" prefHeight="36.0" prefWidth="357.0" style="-fx-background-color: D0D0D0; -fx-background-radius: 7;" />
+      <TextField fx:id="txtALoginEmail" layoutX="55.0" layoutY="239.0" onKeyReleased="#txtALoginEmailOnKeyReleased" prefHeight="36.0" prefWidth="357.0" style="-fx-background-color: D0D0D0; -fx-background-radius: 7;" />
+      <TextField fx:id="txtALoginPW" layoutX="54.0" layoutY="319.0" onKeyReleased="#txtALoginPWOnKeyReleased" prefHeight="36.0" prefWidth="357.0" style="-fx-background-color: D0D0D0; -fx-background-radius: 7;" />
       <Label layoutX="273.0" layoutY="366.0" text="Forget Password ?" textFill="#0542df" />
       <Button fx:id="btnAdminLogIn" layoutX="57.0" layoutY="396.0" mnemonicParsing="false" onAction="#btnAdminLogInOnAction" prefHeight="36.0" prefWidth="159.0" style="-fx-background-color: blue; -fx-background-radius: 5;" text="Log In" textFill="WHITE">
          <font>

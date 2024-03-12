@@ -9,4 +9,5 @@ import java.sql.SQLException;
 public interface AdminDao {
     void addAdmin(Admin admin, Session session) throws SQLException;
 
+    Admin getAdminByEmail(String email, Session session);
 }
