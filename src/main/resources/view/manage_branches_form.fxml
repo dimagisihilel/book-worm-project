@@ -10,7 +10,6 @@
 <?import javafx.scene.layout.AnchorPane?>
 <?import javafx.scene.text.Font?>
 
-
 <AnchorPane prefHeight="555.0" prefWidth="1141.0" xmlns="http://javafx.com/javafx/20.0.1" xmlns:fx="http://javafx.com/fxml/1" fx:controller="lk.ijse.controller.ManageBranchesFormController">
    <children>
       <Label layoutX="52.0" layoutY="22.0" prefHeight="32.0" prefWidth="137.0" text="Manage Branches" textFill="#1d328a">
@@ -33,16 +32,16 @@
             <Font name="Arial Bold" size="16.0" />
          </font>
       </Label>
-      <TableView layoutX="623.0" layoutY="173.0" prefHeight="362.0" prefWidth="506.0">
+      <TableView fx:id="tblbranches" layoutX="623.0" layoutY="173.0" prefHeight="362.0" prefWidth="506.0">
         <columns>
-          <TableColumn prefWidth="189.0" text="Branch Name" />
-          <TableColumn prefWidth="170.0" text="Address" />
-            <TableColumn prefWidth="146.0" text="Contact" />
+          <TableColumn fx:id="colBranchName" prefWidth="189.0" text="Branch Name" />
+          <TableColumn fx:id="colBranchAddress" prefWidth="170.0" text="Address" />
+            <TableColumn fx:id="colBranchContact" prefWidth="146.0" text="Contact" />
         </columns>
       </TableView>
-      <TextField layoutX="186.0" layoutY="71.0" prefHeight="32.0" prefWidth="223.0" style="-fx-background-color: D0D0D0; -fx-background-radius: 8;" />
-      <TextField layoutX="505.0" layoutY="69.0" prefHeight="32.0" prefWidth="199.0" style="-fx-background-color: D0D0D0; -fx-background-radius: 8;" />
-      <TextField layoutX="127.0" layoutY="167.0" prefHeight="32.0" prefWidth="235.0" style="-fx-background-color: D0D0D0; -fx-background-radius: 8;" />
+      <TextField fx:id="txtBranchName" layoutX="186.0" layoutY="71.0" onKeyReleased="#txtBranchNameOnKeyReleased" prefHeight="32.0" prefWidth="223.0" style="-fx-background-color: D0D0D0; -fx-background-radius: 8;" />
+      <TextField fx:id="txtBranchContact" layoutX="505.0" layoutY="69.0" onKeyReleased="#txtBranchContactOnKeyReleased" prefHeight="32.0" prefWidth="199.0" style="-fx-background-color: D0D0D0; -fx-background-radius: 8;" />
+      <TextField fx:id="txtBranchAddress" layoutX="127.0" layoutY="167.0" onKeyReleased="#txtBranchAddressOnKeyReleased" prefHeight="32.0" prefWidth="235.0" style="-fx-background-color: D0D0D0; -fx-background-radius: 8;" />
       <ImageView fitHeight="55.0" fitWidth="60.0" layoutX="90.0" layoutY="270.0">
          <image>
             <Image url="@../assets/vector2.png" />
@@ -58,17 +57,17 @@
             <Image url="@../assets/branches.png" />
          </image>
       </ImageView>
-      <Button layoutX="450.0" layoutY="231.0" mnemonicParsing="false" prefHeight="32.0" prefWidth="123.0" style="-fx-background-color: white; -fx-border-color: blue; -fx-background-radius: 8; -fx-border-radius: 8;" text="Add" textFill="#24419a">
+      <Button fx:id="btnAddbranch" layoutX="450.0" layoutY="231.0" mnemonicParsing="false" onAction="#btnAddbranchOnAction" prefHeight="32.0" prefWidth="123.0" style="-fx-background-color: white; -fx-border-color: blue; -fx-background-radius: 8; -fx-border-radius: 8;" text="Add" textFill="#24419a">
          <font>
             <Font name="FreeSans Bold" size="16.0" />
          </font>
       </Button>
-      <Button layoutX="450.0" layoutY="319.0" mnemonicParsing="false" prefHeight="32.0" prefWidth="123.0" style="-fx-background-color: white; -fx-border-color: blue; -fx-background-radius: 8; -fx-border-radius: 8;" text="Update" textFill="#24419a">
+      <Button fx:id="btnUpdatebranch" layoutX="450.0" layoutY="319.0" mnemonicParsing="false" onAction="#btnUpdatebranchOnAction" prefHeight="32.0" prefWidth="123.0" style="-fx-background-color: white; -fx-border-color: blue; -fx-background-radius: 8; -fx-border-radius: 8;" text="Update" textFill="#24419a">
          <font>
             <Font name="FreeSans Bold" size="16.0" />
          </font>
       </Button>
-      <Button layoutX="450.0" layoutY="405.0" mnemonicParsing="false" prefHeight="32.0" prefWidth="123.0" style="-fx-background-color: white; -fx-border-color: blue; -fx-background-radius: 8; -fx-border-radius: 8;" text="Delete" textFill="#24419a">
+      <Button fx:id="btnDltbranch" layoutX="450.0" layoutY="405.0" mnemonicParsing="false" onAction="#btnDltbranchOnAction" prefHeight="32.0" prefWidth="123.0" style="-fx-background-color: white; -fx-border-color: blue; -fx-background-radius: 8; -fx-border-radius: 8;" text="Delete" textFill="#24419a">
          <font>
             <Font name="FreeSans Bold" size="16.0" />
          </font>
