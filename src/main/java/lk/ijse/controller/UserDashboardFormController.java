@@ -5,10 +5,15 @@ import javafx.fxml.FXMLLoader;
 import javafx.scene.Parent;
 import javafx.scene.Scene;
 import javafx.scene.control.Button;
+import javafx.scene.control.Label;
 import javafx.scene.layout.AnchorPane;
 import javafx.scene.layout.Pane;
 import javafx.stage.Modality;
 import javafx.stage.Stage;
+import lk.ijse.bo.custom.AdminBo;
+import lk.ijse.bo.custom.UserBo;
+import lk.ijse.bo.custom.boImpl.AdminBoImpl;
+import lk.ijse.bo.custom.boImpl.UserBoImpl;
 
 import java.io.IOException;
 
@@ -22,6 +27,10 @@ public class UserDashboardFormController {
     public Button btnRead;
     public Button btnAccount;
     public Button btnDltAcc;
+    public Label lblUserName;
+    public Button btnReturnBooks;
+    private UserBo userBo = new UserBoImpl();
+    private int activeUserId;
 
     public void initialize() throws IOException {
         paneAccSetting.setVisible(false);
@@ -76,6 +85,18 @@ public class UserDashboardFormController {
     }
 
     public void btnDltAccOnAction(ActionEvent actionEvent) {
+
+    }
+    public void setUserName(String userName) {
+
+        lblUserName.setText(userName);
+    }
+
+    public void setUserId(int userId) {
+        activeUserId = userId;
+    }
+
+    public void btnReturnBooksOnAction(ActionEvent actionEvent) {
 
     }
 }

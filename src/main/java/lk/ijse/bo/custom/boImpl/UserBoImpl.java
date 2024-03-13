@@ -6,6 +6,7 @@ import lk.ijse.dao.custom.AdminDao;
 import lk.ijse.dao.custom.UserDao;
 import lk.ijse.dao.custom.daoImpl.AdminDaoImpl;
 import lk.ijse.dao.custom.daoImpl.UserDaoImpl;
+import lk.ijse.dto.AdminDto;
 import lk.ijse.dto.UserDto;
 import lk.ijse.entity.Admin;
 import lk.ijse.entity.User;
@@ -34,5 +35,24 @@ public class UserBoImpl implements UserBo {
             session.close();
         }
         return null;
+    }
+
+    @Override
+    public UserDto loginUser(String email, String password) {
+        Session session = factory.getSession();
+        Transaction transaction = session.beginTransaction();
+        try {
+            User user = userDao.getUserByEmail(email, session);
+            if (user != null && user.getPassword().equals(password)) {
+                // Login successful, return the user DTO
+                return new UserDto(user.getUserId(), user.getFirstName(), user.getLastName(), user.getEmail(), user.getPassword());
+            } else {
+                // Login failed, return null
+                return null;
+            }
+        } finally {
+            transaction.commit();
+            session.close();
+        }
     }
 }

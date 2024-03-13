@@ -38,8 +38,8 @@
                </font>
             </Label>
             <Label layoutX="272.0" layoutY="371.0" text="Forget Password ?" textFill="#0542df" />
-            <TextField layoutX="70.0" layoutY="253.0" prefHeight="39.0" prefWidth="361.0" style="-fx-background-color: D0D0D0; -fx-background-radius: 7;" />
-            <TextField layoutX="70.0" layoutY="328.0" prefHeight="39.0" prefWidth="361.0" style="-fx-background-color: D0D0D0; -fx-background-radius: 7;" />
+            <TextField fx:id="txtUserEmail" layoutX="70.0" layoutY="253.0" onKeyReleased="#txtUserEmailOnKeyReleased" prefHeight="39.0" prefWidth="361.0" style="-fx-background-color: D0D0D0; -fx-background-radius: 7;" />
+            <TextField fx:id="txtUserPW" layoutX="70.0" layoutY="328.0" onKeyReleased="#txtUserPWOnKeyReleased" prefHeight="39.0" prefWidth="361.0" style="-fx-background-color: D0D0D0; -fx-background-radius: 7;" />
             <Button fx:id="btnUserLogIn" layoutX="73.0" layoutY="416.0" mnemonicParsing="false" onAction="#btnUserLogInOnAction" prefHeight="32.0" prefWidth="166.0" style="-fx-background-color: blue; -fx-background-radius: 5;" text="Log In" textFill="#fffefe">
                <font>
                   <Font name="Arial Bold" size="14.0" />

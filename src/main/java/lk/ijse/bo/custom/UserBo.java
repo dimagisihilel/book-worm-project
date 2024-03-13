@@ -7,4 +7,6 @@ import java.sql.SQLException;
 
 public interface UserBo {
     UserDto addUser(UserDto userDto) throws SQLException;
+
+    UserDto loginUser(String email, String password);
 }
