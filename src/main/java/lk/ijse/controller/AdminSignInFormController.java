@@ -33,11 +33,16 @@ public class AdminSignInFormController {
 
 
     public void btnAdminSigninOnAction(ActionEvent actionEvent) throws IOException {
-        navigateToMainWindow();
+        //navigateToMainWindow();
         //adminDashboardFormController.initialize();
 
+        Parent node = FXMLLoader.load(this.getClass().getResource("/view/admin_login_form.fxml"));
+
+        this.subroot.getChildren().clear();
+        this.subroot.getChildren().add(node);
+
     }
-    private void navigateToMainWindow() throws IOException {
+   /* private void navigateToMainWindow() throws IOException {
         Parent rootNode = FXMLLoader.load(this.getClass().getResource("/view/admin_dashboard_form.fxml"));
         Scene scene = new Scene(rootNode);
 
@@ -48,7 +53,7 @@ public class AdminSignInFormController {
         primaryStage.centerOnScreen();
         primaryStage.setTitle("Main Form");
 
-    }
+    }*/
 
 
     public void btnAdminCrtAccOnAction(ActionEvent actionEvent) {

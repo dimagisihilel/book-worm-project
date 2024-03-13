@@ -46,7 +46,7 @@ public class AdminLoginFormController {
             AdminDto adminDto = adminBo.loginAdmin(email, password);
             if (adminDto != null) {
                // navigateToMainWindow();
-                openAdminDashboard(adminDto.getFirstName() + " " + adminDto.getLastName());
+                openAdminDashboard(adminDto.getAdminId(),adminDto.getFirstName() + " " + adminDto.getLastName());
             } else {
                 new Alert(Alert.AlertType.ERROR, "Invalid Email or password").show();
             }
@@ -55,7 +55,6 @@ public class AdminLoginFormController {
             new Alert(Alert.AlertType.ERROR, "An error occurred while logging in").show();
         }
         //navigateToMainWindow();
-
     }
     /*private void navigateToMainWindow() throws IOException {
         Parent rootNode = FXMLLoader.load(this.getClass().getResource("/view/admin_dashboard_form.fxml"));
@@ -69,12 +68,13 @@ public class AdminLoginFormController {
         primaryStage.setTitle("Main Form");
 
     }*/
-    private void openAdminDashboard(String adminName) throws IOException {
+    private void openAdminDashboard(int adminId,String adminName) throws IOException {
         FXMLLoader loader = new FXMLLoader(getClass().getResource("/view/admin_dashboard_form.fxml"));
         Parent rootNode = loader.load();
 
-        // Pass admin name to the dashboard controller
+        // Pass admin name and id to the dashboard controller
         AdminDashboardFormController controller = loader.getController();
+        controller.setAdminId(adminId);
         controller.setAdminName(adminName);
 
         Scene scene = new Scene(rootNode);
