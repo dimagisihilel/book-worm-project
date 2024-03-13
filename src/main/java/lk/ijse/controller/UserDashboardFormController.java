@@ -88,7 +88,6 @@ public class UserDashboardFormController {
 
     }
     public void setUserName(String userName) {
-
         lblUserName.setText(userName);
     }
 
@@ -96,7 +95,11 @@ public class UserDashboardFormController {
         activeUserId = userId;
     }
 
-    public void btnReturnBooksOnAction(ActionEvent actionEvent) {
+    public void btnReturnBooksOnAction(ActionEvent actionEvent) throws IOException {
+        Parent node = FXMLLoader.load(this.getClass().getResource("/view/return_book_form.fxml"));
+
+        this.root.getChildren().clear();
+        this.root.getChildren().add(node);
 
     }
 }
