@@ -13,6 +13,7 @@ import org.hibernate.Session;
 import org.hibernate.Transaction;
 
 import java.sql.SQLException;
+import java.util.List;
 
 public class BranchBoImpl implements BranchBo {
     private BranchDao branchDao = new BranchDaoImpl();
@@ -36,6 +37,11 @@ public class BranchBoImpl implements BranchBo {
         } finally {
             session.close();
         }
+        return null;
+    }
+
+    @Override
+    public List<BranchDto> getAllBranches() throws SQLException {
         return null;
     }
 }
