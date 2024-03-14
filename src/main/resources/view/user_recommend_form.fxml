@@ -15,7 +15,7 @@
 
 <AnchorPane prefHeight="542.0" prefWidth="1173.0" xmlns="http://javafx.com/javafx/20.0.1" xmlns:fx="http://javafx.com/fxml/1" fx:controller="lk.ijse.controller.UserRecommendFormController">
    <children>
-      <TableView fx:id="tblRecomBooks" layoutX="20.0" layoutY="33.0" prefHeight="496.0" prefWidth="634.0">
+      <TableView fx:id="tblRecomBooks" layoutX="20.0" layoutY="33.0" onMouseClicked="#tblOnMouseClicked" prefHeight="496.0" prefWidth="634.0">
         <columns>
           <TableColumn fx:id="colBookId" prefWidth="100.0" text="BookId" />
           <TableColumn fx:id="colTitle" prefWidth="136.0" text="Title" />

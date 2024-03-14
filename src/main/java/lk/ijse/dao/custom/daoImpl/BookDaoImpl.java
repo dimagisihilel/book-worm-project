@@ -3,6 +3,7 @@ package lk.ijse.dao.custom.daoImpl;
 import lk.ijse.dao.custom.BookDao;
 import lk.ijse.entity.Book;
 import org.hibernate.Session;
+import org.hibernate.query.Query;
 
 import java.util.List;
 
@@ -32,5 +33,13 @@ public class BookDaoImpl implements BookDao {
     @Override
     public List<Book> getAll(Session session) {
         return session.createQuery("from Book",Book.class).list();
+    }
+
+    @Override
+    public boolean updateAvailability(Session session, int bookId, String availability) {
+        Query query = session.createQuery("update Book b set b.availability=:av where b.bookId=:id");
+        query.setParameter("av",availability);
+        query.setParameter("id",bookId);
+        return 0<query.executeUpdate();
     }
 }

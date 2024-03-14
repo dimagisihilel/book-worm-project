@@ -34,11 +34,14 @@ public class UserDashboardFormController {
 
     public void initialize() throws IOException {
         paneAccSetting.setVisible(false);
-        initializeDashboard();
+
     }
 
     private void initializeDashboard() throws IOException {
-        Parent node = FXMLLoader.load(this.getClass().getResource("/view/user_recommend_form.fxml"));
+        FXMLLoader loader = new FXMLLoader(this.getClass().getResource("/view/user_recommend_form.fxml"));
+        Parent node = loader.load();
+        UserRecommendFormController controller = loader.getController();
+        controller.setUserId(activeUserId);
 
         this.root.getChildren().clear();
         this.root.getChildren().add(node);
@@ -87,8 +90,9 @@ public class UserDashboardFormController {
     public void btnDltAccOnAction(ActionEvent actionEvent) {
 
     }
-    public void setUserName(String userName) {
+    public void setUserName(String userName) throws IOException {
         lblUserName.setText(userName);
+        initializeDashboard();
     }
 
     public void setUserId(int userId) {
@@ -96,8 +100,11 @@ public class UserDashboardFormController {
     }
 
     public void btnReturnBooksOnAction(ActionEvent actionEvent) throws IOException {
-        Parent node = FXMLLoader.load(this.getClass().getResource("/view/return_book_form.fxml"));
+        FXMLLoader loader = new  FXMLLoader(this.getClass().getResource("/view/return_book_form.fxml"));
+        Parent node = loader.load();
 
+        ReturnBookFormController controller = loader.getController();
+        controller.setUserId(activeUserId);
         this.root.getChildren().clear();
         this.root.getChildren().add(node);
 

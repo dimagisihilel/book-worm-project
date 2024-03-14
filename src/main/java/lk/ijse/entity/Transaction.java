@@ -19,6 +19,7 @@ public class Transaction {
     @JoinColumn(name = "bookId")
     private Book book;
     private LocalDate borrowedDate;
+    private boolean returned;
     private LocalDate returnedDate;
 
     public Transaction() {
@@ -70,6 +71,14 @@ public class Transaction {
 
     public void setReturnedDate(LocalDate returnedDate) {
         this.returnedDate = returnedDate;
+    }
+
+    public boolean isReturned() {
+        return returned;
+    }
+
+    public void setReturned(boolean returned) {
+        this.returned = returned;
     }
 
     @Override
