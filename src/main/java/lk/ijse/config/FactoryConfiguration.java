@@ -24,7 +24,7 @@ public class FactoryConfiguration {
         return factoryConfiguration == null ? factoryConfiguration = new FactoryConfiguration() : factoryConfiguration;
     }
 
-    public static Session getSession() {
+    public  Session getSession() {
         return sessionFactory.openSession();
 
     }

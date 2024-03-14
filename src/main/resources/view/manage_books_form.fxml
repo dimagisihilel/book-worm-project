@@ -99,7 +99,7 @@
             </ImageView>
          </children>
       </Pane>
-      <TableView fx:id="tblBooks" layoutX="575.0" layoutY="23.0" prefHeight="516.0" prefWidth="551.0">
+      <TableView fx:id="tblBooks" layoutX="575.0" onMouseClicked="#tblBookOnMouseClicked" layoutY="23.0" prefHeight="516.0" prefWidth="551.0">
         <columns>
           <TableColumn fx:id="colBookName" prefWidth="129.0" text="Book Name" />
           <TableColumn fx:id="colBookAuthor" prefWidth="164.0" text="Author" />

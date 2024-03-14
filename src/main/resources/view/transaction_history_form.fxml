@@ -9,17 +9,16 @@
 <?import javafx.scene.layout.AnchorPane?>
 <?import javafx.scene.text.Font?>
 
-
 <AnchorPane prefHeight="555.0" prefWidth="1141.0" xmlns="http://javafx.com/javafx/20.0.1" xmlns:fx="http://javafx.com/fxml/1" fx:controller="lk.ijse.controller.TransactionHistoryFormController">
    <children>
-      <TableView layoutX="13.0" layoutY="143.0" prefHeight="395.0" prefWidth="923.0">
+      <TableView fx:id="tblTrnsctionHistry" layoutX="13.0" layoutY="143.0" prefHeight="395.0" prefWidth="923.0">
         <columns>
-          <TableColumn prefWidth="130.0" text="Transaction Id" />
-          <TableColumn prefWidth="134.0" text="Book Id" />
-            <TableColumn prefWidth="157.0" text="Book Name" />
-            <TableColumn prefWidth="179.0" text="User Id" />
-            <TableColumn prefWidth="171.0" text="Branch Id" />
-            <TableColumn prefWidth="151.0" text="Date" />
+          <TableColumn fx:id="colTrnctionid" prefWidth="130.0" text="Transaction Id" />
+          <TableColumn fx:id="colBookId" prefWidth="134.0" text="Book Id" />
+            <TableColumn fx:id="colBookName" prefWidth="157.0" text="Book Name" />
+            <TableColumn fx:id="colUserId" prefWidth="179.0" text="User Id" />
+            <TableColumn fx:id="colBranchId" prefWidth="171.0" text="Branch Id" />
+            <TableColumn fx:id="colDate" prefWidth="151.0" text="Date" />
         </columns>
       </TableView>
       <Label layoutX="34.0" layoutY="10.0" prefHeight="54.0" prefWidth="180.0" text="Transaction History" textFill="#2e2586">
@@ -27,7 +26,7 @@
             <Font name="Georgia" size="18.0" />
          </font>
       </Label>
-      <TextField layoutX="435.0" layoutY="53.0" prefHeight="37.0" prefWidth="282.0" promptText="Search by User Id" style="-fx-background-color: white; -fx-background-radius: 9;" />
+      <TextField fx:id="txtUserId" layoutX="435.0" layoutY="53.0" prefHeight="37.0" prefWidth="282.0" promptText="Search by User Id" style="-fx-background-color: white; -fx-background-radius: 9;" />
       <Label layoutX="354.0" layoutY="59.0" prefHeight="25.0" prefWidth="66.0" text="User Id" textFill="#2e2586">
          <font>
             <Font name="Arial" size="18.0" />

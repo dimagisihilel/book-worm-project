@@ -39,7 +39,7 @@ public class AdminBoImpl implements AdminBo {
             Admin admin = adminDao.getAdminByEmail(email, session);
             if (admin != null && admin.getPassword().equals(password)) {
                 // Login successful, return the admin DTO
-                return new AdminDto(admin.getAdminId(), admin.getFirstName(), admin.getLastName(), admin.getEmail(), admin.getPassword());
+                return new AdminDto(admin.getAdminId(), admin.getFirstName(), admin.getLastName(), admin.getEmail(),admin.getPassword());
             } else {
                 // Login failed, return null
                 return null;

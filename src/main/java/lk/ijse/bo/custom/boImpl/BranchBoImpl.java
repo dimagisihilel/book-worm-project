@@ -11,8 +11,10 @@ import lk.ijse.entity.Admin;
 import lk.ijse.entity.Branch;
 import org.hibernate.Session;
 import org.hibernate.Transaction;
+import org.modelmapper.ModelMapper;
 
 import java.sql.SQLException;
+import java.util.ArrayList;
 import java.util.List;
 
 public class BranchBoImpl implements BranchBo {
@@ -42,6 +44,43 @@ public class BranchBoImpl implements BranchBo {
 
     @Override
     public List<BranchDto> getAllBranches() throws SQLException {
-        return null;
+        List<BranchDto> list = new ArrayList<>();
+       /* List<BranchDto> branchDtos = new ArrayList<>();
+        try {
+            List<Branch> branches = branchDao.getAllBranches();
+            for (Branch branch : branches) {
+                branchDtos.add(convertBranchToDto(branch));
+            }
+        } catch (Exception e) {
+            e.printStackTrace();
+        }
+        return branchDtos;*/
+        ModelMapper mapper = new ModelMapper();
+        Session session = factory.getSession();
+        try {
+            List<Branch> allBranches = branchDao.getAllBranches(session);
+
+            for (Branch entity : allBranches) {
+                BranchDto map = mapper.map(entity, BranchDto.class);
+                list.add(map);
+            }
+        }catch (Exception e){
+            e.printStackTrace();
+        }finally {
+            session.close();
+        }
+
+
+        return list;
     }
+
+   /* private BranchDto convertBranchToDto(Branch branch) {
+        BranchDto branchDto = new BranchDto();
+        branchDto.setBranchId(branch.getBranchId());
+        branchDto.setBranchName(branch.getBranchName());
+        branchDto.setBranchAddress(branch.getAddress());
+        branchDto.setBranchContact(branch.getContact());
+        branchDto.setAdminId(branch.getAdmin().getAdminId());
+        return branchDto;
+    }*/
 }

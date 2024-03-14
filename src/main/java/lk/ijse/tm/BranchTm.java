@@ -22,4 +22,16 @@ public class BranchTm {
     public String getBranchContact() {
         return branchContact;
     }
+
+    public void setBranchName(String branchName) {
+        this.branchName = branchName;
+    }
+
+    public void setBranchAddress(String branchAddress) {
+        this.branchAddress = branchAddress;
+    }
+
+    public void setBranchContact(String branchContact) {
+        this.branchContact = branchContact;
+    }
 }

@@ -36,10 +36,10 @@ public class ManageBranchesFormController {
 
     private BranchBo branchBo = new BranchBoImpl();
 
-   /* public void initialize() {
+    public void initialize() {
         setData();
         setCellValueFactory();
-    }*/
+    }
 
     // Method to set the active admin ID
     public void setActiveAdminId(int adminId) {
