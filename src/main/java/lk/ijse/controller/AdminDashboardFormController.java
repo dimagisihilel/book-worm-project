@@ -18,6 +18,7 @@ public class AdminDashboardFormController {
     public Button btnTrnsctionHistry;
     public Button btnAdminAcc;
     public Label lblAdminName;
+    public Button btnNotReturned;
 
     private AdminBo adminBo = new AdminBoImpl();
 
@@ -64,5 +65,12 @@ public class AdminDashboardFormController {
 
     public void setAdminId(int adminId) {
         activeAdminId = adminId;
+    }
+
+    public void btnNotReturnedOnAction(ActionEvent actionEvent) throws IOException {
+        Parent node = FXMLLoader.load(this.getClass().getResource("/view/not_returned_users_form.fxml"));
+        this.root.getChildren().clear();
+        this.root.getChildren().add(node);
+
     }
 }
