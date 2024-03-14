@@ -60,6 +60,7 @@ public class ManageBranchesFormController {
             branchBo.addBranch(branchDto);
             new Alert(Alert.AlertType.INFORMATION, "Branch added successfully").show();
             clearTextFields();
+            setData();
         } catch (SQLException e) {
             new Alert(Alert.AlertType.ERROR, "Failed to add branch: " + e.getMessage()).show();
             e.printStackTrace();

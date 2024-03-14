@@ -6,7 +6,6 @@ public class BranchCM {
 
     public BranchCM() {
     }
-
     public BranchCM(String branchName, int branchId) {
         this.branchName = branchName;
         this.branchId = branchId;

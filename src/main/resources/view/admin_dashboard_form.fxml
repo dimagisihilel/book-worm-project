@@ -40,12 +40,7 @@
             <Font name="Arial Bold" size="16.0" />
          </font>
       </Label>
-      <Label layoutX="408.0" layoutY="63.0" text="Transaction History">
-         <font>
-            <Font name="Arial Bold" size="16.0" />
-         </font>
-      </Label>
-      <Line endX="621.0" layoutX="151.0" layoutY="87.0" startX="-100.0" />
+      <Line endX="408.0" layoutX="151.0" layoutY="87.0" startX="-100.0" />
       <AnchorPane fx:id="root" layoutX="20.0" layoutY="106.0" prefHeight="555.0" prefWidth="1141.0" style="-fx-background-color: grey;" />
       <Button fx:id="BtnMngBooks" layoutX="51.0" layoutY="45.0" mnemonicParsing="false" onAction="#BtnMngBooksOnAction" opacity="0.0" prefHeight="51.0" prefWidth="131.0" text="Button">
          <cursor>
@@ -57,21 +52,16 @@
             <Cursor fx:constant="HAND" />
          </cursor>
       </Button>
-      <Button fx:id="btnTrnsctionHistry" layoutX="402.0" layoutY="45.0" mnemonicParsing="false" onAction="#btnTrnsctionHistryOnAction" opacity="0.0" prefHeight="51.0" prefWidth="174.0" text="Button">
-         <cursor>
-            <Cursor fx:constant="HAND" />
-         </cursor>
-      </Button>
       <Button fx:id="btnAdminAcc" layoutX="939.0" layoutY="22.0" mnemonicParsing="false" onAction="#btnAdminAccOnAction" opacity="0.0" prefHeight="36.0" prefWidth="174.0" text="Button">
          <cursor>
             <Cursor fx:constant="HAND" />
          </cursor>
       </Button>
-      <Label layoutX="599.0" layoutY="63.0" text="Not Returned Books">
+      <Label layoutX="389.0" layoutY="63.0" text="Not Returned Books">
          <font>
             <Font name="Arial Bold" size="16.0" />
          </font>
       </Label>
-      <Button fx:id="btnNotReturned" layoutX="594.0" layoutY="45.0" mnemonicParsing="false" onAction="#btnNotReturnedOnAction" opacity="0.0" prefHeight="51.0" prefWidth="174.0" text="Button" />
+      <Button fx:id="btnNotReturned" layoutX="386.0" layoutY="45.0" mnemonicParsing="false" onAction="#btnNotReturnedOnAction" opacity="0.0" prefHeight="51.0" prefWidth="174.0" text="Button" />
    </children>
 </AnchorPane>

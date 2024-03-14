@@ -32,22 +32,17 @@
                   <Font name="Arial" size="17.0" />
                </font>
             </Label>
-            <Label layoutX="293.0" layoutY="149.0" text="Copies" textFill="#161b79">
-               <font>
-                  <Font name="Arial" size="17.0" />
-               </font>
-            </Label>
             <Label layoutX="29.0" layoutY="69.0" text="Book Title " textFill="#161b79">
                <font>
                   <Font name="Arial" size="17.0" />
                </font>
             </Label>
-            <Label layoutX="29.0" layoutY="237.0" text="Library Branch" textFill="#161b79">
+            <Label layoutX="288.0" layoutY="156.0" text="Library Branch" textFill="#161b79">
                <font>
                   <Font name="Arial" size="17.0" />
                </font>
             </Label>
-            <Label layoutX="285.0" layoutY="233.0" text="Availability" textFill="#161b79">
+            <Label layoutX="27.0" layoutY="234.0" text="Availability" textFill="#161b79">
                <font>
                   <Font name="Arial" size="17.0" />
                </font>
@@ -55,9 +50,8 @@
             <TextField fx:id="txtBTitle" layoutX="23.0" layoutY="96.0" prefHeight="33.0" prefWidth="221.0" promptText="title" style="-fx-background-color: white; -fx-background-radius: 9;" />
             <TextField fx:id="txtAuthor" layoutX="288.0" layoutY="96.0" prefHeight="33.0" prefWidth="221.0" promptText="Author" style="-fx-background-color: white; -fx-background-radius: 9;" />
             <TextField fx:id="txtGenre" layoutX="23.0" layoutY="181.0" prefHeight="33.0" prefWidth="221.0" promptText="genre" style="-fx-background-color: white; -fx-background-radius: 9;" />
-            <TextField fx:id="txtNoOfCopies" layoutX="284.0" layoutY="181.0" prefHeight="33.0" prefWidth="221.0" promptText="no.of.copies" style="-fx-background-color: white; -fx-background-radius: 9;" />
-            <TextField fx:id="txtAvailability" layoutX="284.0" layoutY="260.0" prefHeight="33.0" prefWidth="221.0" promptText="availability" style="-fx-background-color: white; -fx-background-radius: 9;" />
-            <ComboBox fx:id="cmbBranch" layoutX="28.0" layoutY="260.0" onAction="#cmbBranchOnAction" prefHeight="33.0" prefWidth="212.0" style="-fx-background-color: white; -fx-background-radius: 9;" />
+            <TextField fx:id="txtAvailability" layoutX="23.0" layoutY="258.0" prefHeight="33.0" prefWidth="221.0" promptText="availability" style="-fx-background-color: white; -fx-background-radius: 9;" />
+            <ComboBox fx:id="cmbBranch" layoutX="284.0" layoutY="181.0" onAction="#cmbBranchOnAction" prefHeight="33.0" prefWidth="212.0" style="-fx-background-color: white; -fx-background-radius: 9;" />
             <Button fx:id="btnAddBook" layoutX="67.0" layoutY="349.0" mnemonicParsing="false" onAction="#btnAddBookOnAction" prefHeight="33.0" prefWidth="152.0" style="-fx-background-color: light grey; -fx-border-color: blue; -fx-border-radius: 8; -fx-background-radius: 8;" text="Add" textFill="#2c1f9a">
                <font>
                   <Font name="FreeSerif Bold" size="16.0" />
@@ -99,11 +93,11 @@
             </ImageView>
          </children>
       </Pane>
-      <TableView fx:id="tblBooks" layoutX="575.0" onMouseClicked="#tblBookOnMouseClicked" layoutY="23.0" prefHeight="516.0" prefWidth="551.0">
+      <TableView fx:id="tblBooks" layoutX="575.0" layoutY="23.0" onMouseClicked="#tblBookOnMouseClicked" prefHeight="516.0" prefWidth="551.0">
         <columns>
           <TableColumn fx:id="colBookName" prefWidth="129.0" text="Book Name" />
           <TableColumn fx:id="colBookAuthor" prefWidth="164.0" text="Author" />
-            <TableColumn fx:id="colTotalCopies" prefWidth="102.0" text="Total Copies" />
+            <TableColumn fx:id="colTotalCopies" prefWidth="102.0" text="Genre" />
             <TableColumn fx:id="colAvailability" prefWidth="155.0" text="Availability" />
         </columns>
       </TableView>

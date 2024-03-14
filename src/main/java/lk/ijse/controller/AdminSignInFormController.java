@@ -42,20 +42,6 @@ public class AdminSignInFormController {
         this.subroot.getChildren().add(node);
 
     }
-   /* private void navigateToMainWindow() throws IOException {
-        Parent rootNode = FXMLLoader.load(this.getClass().getResource("/view/admin_dashboard_form.fxml"));
-        Scene scene = new Scene(rootNode);
-
-        subroot.getChildren().clear();
-        Stage primaryStage = (Stage) subroot.getScene().getWindow();
-
-        primaryStage.setScene(scene);
-        primaryStage.centerOnScreen();
-        primaryStage.setTitle("Main Form");
-
-    }*/
-
-
     public void btnAdminCrtAccOnAction(ActionEvent actionEvent) {
 
         if(!validate()){

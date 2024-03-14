@@ -113,6 +113,8 @@ public class ManageBooksFormController {
         try {
             bookBo.addBook(bookDto);
             new Alert(Alert.AlertType.INFORMATION, "Book Added Successfully").show();
+            clearTextFields();
+            setTableData();
         }catch (Exception e){
             e.printStackTrace();
         }
@@ -123,6 +125,7 @@ public class ManageBooksFormController {
         try {
             bookBo.updateBook(bookDto);
             new Alert(Alert.AlertType.INFORMATION, "Book Updated Successfully").show();
+            clearTextFields();
             setTableData();
         }catch (Exception e){
             e.printStackTrace();
@@ -169,5 +172,12 @@ public class ManageBooksFormController {
                 break;
             }
         }
+    }
+    private void clearTextFields() {
+        txtBTitle.setText("");
+        txtAuthor.setText("");
+        txtGenre.setText("");
+        cmbBranch.getSelectionModel().clearSelection();
+        txtAvailability.setText("");
     }
 }

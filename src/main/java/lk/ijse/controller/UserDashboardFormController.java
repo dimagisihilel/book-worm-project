@@ -60,10 +60,10 @@ public class UserDashboardFormController {
     }
 
     public void btnReadOnAction(ActionEvent actionEvent) throws IOException {
-        Parent node = FXMLLoader.load(this.getClass().getResource("/view/user_history_form.fxml"));
+       /* Parent node = FXMLLoader.load(this.getClass().getResource("/view/user_history_form.fxml"));
 
         this.root.getChildren().clear();
-        this.root.getChildren().add(node);
+        this.root.getChildren().add(node);*/
     }
 
     public void btnRecommendOnAction(ActionEvent actionEvent) throws IOException {

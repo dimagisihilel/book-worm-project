@@ -15,7 +15,6 @@ public class AdminDashboardFormController {
     public AnchorPane root;
     public Button BtnMngBooks;
     public Button btnMngBrnches;
-    public Button btnTrnsctionHistry;
     public Button btnAdminAcc;
     public Label lblAdminName;
     public Button btnNotReturned;
@@ -52,9 +51,9 @@ public class AdminDashboardFormController {
 
 
     public void btnTrnsctionHistryOnAction(ActionEvent actionEvent) throws IOException {
-        Parent node = FXMLLoader.load(this.getClass().getResource("/view/transaction_history_form.fxml"));
+        /*Parent node = FXMLLoader.load(this.getClass().getResource("/view/transaction_history_form.fxml"));
         this.root.getChildren().clear();
-        this.root.getChildren().add(node);
+        this.root.getChildren().add(node);*/
     }
 
     public void btnAdminAccOnAction(ActionEvent actionEvent) {
