@@ -24,4 +24,17 @@ public class UserDaoImpl implements UserDao {
         return query.uniqueResult(); // Return the unique result or null if not found
     }
 
+    @Override
+    public User getUserById(int activeUserId, Session session) {
+        // Query to get user by ID
+        Query<User> query = session.createQuery("FROM User WHERE userId = :userId", User.class);
+        query.setParameter("userId", activeUserId);
+        return query.uniqueResult(); // Return the unique result or null if not found
+    }
+
+    @Override
+    public void updateUser(User existingUser, Session session) {
+        session.update(existingUser);
+    }
+
 }

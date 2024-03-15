@@ -78,6 +78,8 @@ public class UserDashboardFormController {
         FXMLLoader loader = new FXMLLoader(getClass().getResource("/view/user_account_form.fxml"));
         Parent parent = loader.load();
         UserAccountFormController controller = loader.getController();
+        controller.setUserId(activeUserId);
+        controller.setUserName(lblUserName.getText());
         controller.setParentController(this);
         stage.setScene(new Scene(parent));
 

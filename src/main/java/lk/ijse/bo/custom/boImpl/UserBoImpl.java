@@ -55,4 +55,54 @@ public class UserBoImpl implements UserBo {
             session.close();
         }
     }
+
+    @Override
+    public UserDto getUserById(int activeUserId) {
+        Session session = factory.getSession();
+        Transaction transaction = session.beginTransaction();
+        try {
+            User user = userDao.getUserById(activeUserId, session);
+            if (user != null) {
+                // User found, return the user DTO
+                return new UserDto(user.getUserId(), user.getFirstName(), user.getLastName(), user.getEmail(), user.getPassword());
+            } else {
+                // User not found, return null
+                return null;
+            }
+        } finally {
+            transaction.commit();
+            session.close();
+        }
+    }
+
+    @Override
+    public UserDto updateUser(UserDto updatedUser) {
+        Session session = factory.getSession();
+        Transaction transaction = session.beginTransaction();
+        try {
+            // Get the existing user entity from the database
+            User existingUser = userDao.getUserById(updatedUser.getUserId(), session);
+
+            if (existingUser != null) {
+                // Update the existing user entity with the new data
+                existingUser.setFirstName(updatedUser.getFirstName());
+                existingUser.setLastName(updatedUser.getLastName());
+                existingUser.setEmail(updatedUser.getEmail());
+                existingUser.setPassword(updatedUser.getPassword());
+
+                // Update the user in the database
+                userDao.updateUser(existingUser, session);
+                transaction.commit();
+                return updatedUser;
+            } else {
+                return null;
+            }
+        } catch (Exception e) {
+            transaction.rollback();
+            e.printStackTrace();
+            return null;
+        } finally {
+            session.close();
+        }
+    }
 }

@@ -9,4 +9,8 @@ public interface UserBo {
     UserDto addUser(UserDto userDto) throws SQLException;
 
     UserDto loginUser(String email, String password);
+
+    UserDto getUserById(int activeUserId);
+
+    UserDto updateUser(UserDto updatedUser);
 }

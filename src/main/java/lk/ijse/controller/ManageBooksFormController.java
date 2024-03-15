@@ -4,6 +4,7 @@ import javafx.collections.FXCollections;
 import javafx.event.ActionEvent;
 import javafx.scene.control.*;
 import javafx.scene.control.cell.PropertyValueFactory;
+import javafx.scene.input.KeyEvent;
 import javafx.scene.input.MouseEvent;
 import javafx.util.StringConverter;
 import lk.ijse.bo.custom.BookBo;
@@ -179,5 +180,17 @@ public class ManageBooksFormController {
         txtGenre.setText("");
         cmbBranch.getSelectionModel().clearSelection();
         txtAvailability.setText("");
+    }
+
+    public void txtBTitleOnKeyReleased(KeyEvent keyEvent) {
+    }
+
+    public void txtAuthorOnKeyReleased(KeyEvent keyEvent) {
+    }
+
+    public void txtGenreOnKeyReleased(KeyEvent keyEvent) {
+    }
+
+    public void txtAvailabilityOnKeyReleased(KeyEvent keyEvent) {
     }
 }

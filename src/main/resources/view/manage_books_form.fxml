@@ -47,10 +47,10 @@
                   <Font name="Arial" size="17.0" />
                </font>
             </Label>
-            <TextField fx:id="txtBTitle" layoutX="23.0" layoutY="96.0" prefHeight="33.0" prefWidth="221.0" promptText="title" style="-fx-background-color: white; -fx-background-radius: 9;" />
-            <TextField fx:id="txtAuthor" layoutX="288.0" layoutY="96.0" prefHeight="33.0" prefWidth="221.0" promptText="Author" style="-fx-background-color: white; -fx-background-radius: 9;" />
-            <TextField fx:id="txtGenre" layoutX="23.0" layoutY="181.0" prefHeight="33.0" prefWidth="221.0" promptText="genre" style="-fx-background-color: white; -fx-background-radius: 9;" />
-            <TextField fx:id="txtAvailability" layoutX="23.0" layoutY="258.0" prefHeight="33.0" prefWidth="221.0" promptText="availability" style="-fx-background-color: white; -fx-background-radius: 9;" />
+            <TextField fx:id="txtBTitle" layoutX="23.0" layoutY="96.0" onKeyReleased="#txtBTitleOnKeyReleased" prefHeight="33.0" prefWidth="221.0" promptText="title" style="-fx-background-color: white; -fx-background-radius: 9;" />
+            <TextField fx:id="txtAuthor" layoutX="288.0" layoutY="96.0" onKeyReleased="#txtAuthorOnKeyReleased" prefHeight="33.0" prefWidth="221.0" promptText="Author" style="-fx-background-color: white; -fx-background-radius: 9;" />
+            <TextField fx:id="txtGenre" layoutX="23.0" layoutY="181.0" onKeyReleased="#txtGenreOnKeyReleased" prefHeight="33.0" prefWidth="221.0" promptText="genre" style="-fx-background-color: white; -fx-background-radius: 9;" />
+            <TextField fx:id="txtAvailability" layoutX="23.0" layoutY="258.0" onKeyReleased="#txtAvailabilityOnKeyReleased" prefHeight="33.0" prefWidth="221.0" promptText="availability" style="-fx-background-color: white; -fx-background-radius: 9;" />
             <ComboBox fx:id="cmbBranch" layoutX="284.0" layoutY="181.0" onAction="#cmbBranchOnAction" prefHeight="33.0" prefWidth="212.0" style="-fx-background-color: white; -fx-background-radius: 9;" />
             <Button fx:id="btnAddBook" layoutX="67.0" layoutY="349.0" mnemonicParsing="false" onAction="#btnAddBookOnAction" prefHeight="33.0" prefWidth="152.0" style="-fx-background-color: light grey; -fx-border-color: blue; -fx-border-radius: 8; -fx-background-radius: 8;" text="Add" textFill="#2c1f9a">
                <font>
