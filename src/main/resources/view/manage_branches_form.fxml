@@ -32,7 +32,7 @@
             <Font name="Arial Bold" size="16.0" />
          </font>
       </Label>
-      <TableView fx:id="tblbranches" layoutX="623.0" layoutY="173.0" prefHeight="362.0" prefWidth="506.0">
+      <TableView fx:id="tblbranches" layoutX="623.0" layoutY="173.0" onMouseClicked="#tblBranchesOnMouseClicked" prefHeight="362.0" prefWidth="506.0">
         <columns>
           <TableColumn fx:id="colBranchName" prefWidth="189.0" text="Branch Name" />
           <TableColumn fx:id="colBranchAddress" prefWidth="170.0" text="Address" />

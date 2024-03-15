@@ -9,4 +9,6 @@ public interface BranchBo {
     BranchDto addBranch(BranchDto branchDto) throws SQLException;
 
     List<BranchDto> getAllBranches() throws SQLException;
+
+    void updateBranch(BranchDto branchDto);
 }

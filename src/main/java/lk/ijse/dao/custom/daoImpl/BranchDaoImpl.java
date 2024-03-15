@@ -17,4 +17,14 @@ public class BranchDaoImpl implements BranchDao {
     public List<Branch> getAllBranches(Session session) {
         return session.createQuery("from Branch", Branch.class).list();
     }
+
+    @Override
+    public Branch getBranchById(int branchId, Session session) {
+        return session.get(Branch.class, branchId);
+    }
+
+    @Override
+    public void updateBranch(Branch existingBranch, Session session) {
+        session.merge(existingBranch);
+    }
 }

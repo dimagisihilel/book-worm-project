@@ -8,6 +8,7 @@ import lk.ijse.dao.custom.daoImpl.AdminDaoImpl;
 import lk.ijse.dao.custom.daoImpl.BranchDaoImpl;
 import lk.ijse.dto.BranchDto;
 import lk.ijse.entity.Admin;
+import lk.ijse.entity.Book;
 import lk.ijse.entity.Branch;
 import org.hibernate.Session;
 import org.hibernate.Transaction;
@@ -74,13 +75,29 @@ public class BranchBoImpl implements BranchBo {
         return list;
     }
 
-   /* private BranchDto convertBranchToDto(Branch branch) {
-        BranchDto branchDto = new BranchDto();
-        branchDto.setBranchId(branch.getBranchId());
-        branchDto.setBranchName(branch.getBranchName());
-        branchDto.setBranchAddress(branch.getAddress());
-        branchDto.setBranchContact(branch.getContact());
-        branchDto.setAdminId(branch.getAdmin().getAdminId());
-        return branchDto;
-    }*/
+    @Override
+    public void updateBranch(BranchDto branchDto) {
+        Session session = factory.getSession();
+        Transaction transaction = session.beginTransaction();
+        try {
+            Branch existingBranch = branchDao.getBranchById(branchDto.getBranchId(), session);
+            session.detach(existingBranch.getAdmin());
+
+            existingBranch.setBranchName(branchDto.getBranchName());
+            existingBranch.setAddress(branchDto.getBranchAddress());
+            existingBranch.setContact(branchDto.getBranchContact());
+
+            // Update the branch entity in the database
+            branchDao.updateBranch(existingBranch, session);
+
+            System.out.println("Branch updated successfully");
+            transaction.commit();
+        } catch (Exception e) {
+            transaction.rollback();
+            e.printStackTrace();
+        } finally {
+            session.close();
+        }
+    }
+
 }

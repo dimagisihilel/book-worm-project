@@ -5,10 +5,12 @@ import javafx.event.ActionEvent;
 import javafx.scene.control.*;
 import javafx.scene.control.cell.PropertyValueFactory;
 import javafx.scene.input.KeyEvent;
+import javafx.scene.input.MouseEvent;
 import lk.ijse.bo.custom.AdminBo;
 import lk.ijse.bo.custom.BranchBo;
 import lk.ijse.bo.custom.boImpl.AdminBoImpl;
 import lk.ijse.bo.custom.boImpl.BranchBoImpl;
+import lk.ijse.dto.BookDto;
 import lk.ijse.dto.BranchDto;
 import lk.ijse.tm.BranchTm;
 import lk.ijse.util.Regex;
@@ -100,6 +102,16 @@ public class ManageBranchesFormController {
 
 
     public void btnUpdatebranchOnAction(ActionEvent actionEvent) {
+        BranchDto branchDto = collectData();
+        try {
+            branchBo.updateBranch(branchDto);
+            new Alert(Alert.AlertType.INFORMATION, "Branch Updated Successfully").show();
+            clearTextFields();
+            setData();
+            //setTableData();
+        }catch (Exception e){
+            e.printStackTrace();
+        }
     }
 
     public void btnDltbranchOnAction(ActionEvent actionEvent) {
@@ -142,4 +154,11 @@ public class ManageBranchesFormController {
         txtBranchContact.clear();
     }
 
+    public void tblBranchesOnMouseClicked(MouseEvent mouseEvent) {
+        BranchTm selectedItem = tblbranches.getSelectionModel().getSelectedItem();
+        if (selectedItem==null)return;
+        txtBranchName.setText(selectedItem.getBranchName());
+        txtBranchAddress.setText(selectedItem.getBranchAddress());
+        txtBranchContact.setText(selectedItem.getBranchContact());
+    }
 }
