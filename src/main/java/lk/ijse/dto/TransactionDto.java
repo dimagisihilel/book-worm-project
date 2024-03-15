@@ -59,4 +59,5 @@ public class TransactionDto {
                 ", returnedDate=" + returnedDate +
                 '}';
     }
+
 }

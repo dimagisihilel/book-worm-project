@@ -24,4 +24,5 @@ public class TransactionDaoImpl implements TransactionDao {
         query.setParameter("id",transactionId);
         query.executeUpdate();
     }
+
 }

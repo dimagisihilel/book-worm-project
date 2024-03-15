@@ -9,4 +9,5 @@ public interface TransactionDao {
     void save(Transaction transaction, Session session);
     List<Object[]> getNotReturnedListByUserId(int userId, Session session);
     void returnBook(int transactionId,Session session);
+
 }
