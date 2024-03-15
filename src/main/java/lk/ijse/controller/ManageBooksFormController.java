@@ -17,6 +17,8 @@ import lk.ijse.dao.custom.daoImpl.BranchDaoImpl;
 import lk.ijse.dto.BookDto;
 import lk.ijse.dto.BranchDto;
 import lk.ijse.tm.BookTM;
+import lk.ijse.util.Regex;
+import lk.ijse.util.TextFields;
 import org.modelmapper.ModelMapper;
 
 import java.sql.SQLException;
@@ -183,14 +185,18 @@ public class ManageBooksFormController {
     }
 
     public void txtBTitleOnKeyReleased(KeyEvent keyEvent) {
+        Regex.setTextColor(TextFields.NAME,txtBTitle);
     }
 
     public void txtAuthorOnKeyReleased(KeyEvent keyEvent) {
+        Regex.setTextColor(TextFields.NAME,txtAuthor);
     }
 
     public void txtGenreOnKeyReleased(KeyEvent keyEvent) {
+        Regex.setTextColor(TextFields.NAME,txtGenre);
     }
 
     public void txtAvailabilityOnKeyReleased(KeyEvent keyEvent) {
+        Regex.setTextColor(TextFields.NAME,txtAvailability);
     }
 }
